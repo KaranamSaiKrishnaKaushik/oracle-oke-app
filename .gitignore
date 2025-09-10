@@ -1,0 +1,59 @@
+# Node
+#node_modules/
+#dist/
+
+# Dotnet
+#bin/
+#obj/
+
+# Docker
+*.log
+
+# Others
+#.env
+
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/frontend-oke-app/node_modules
+/frontend-oke-app/npm-debug.log
+/frontend-oke-app/yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/frontend-oke-app/.angular/cache
+/frontend-oke-app/.sass-cache/
+/frontend-oke-app/connect.lock
+/frontend-oke-app/coverage
+/frontend-oke-app/libpeerconnection.log
+/frontend-oke-app/testem.log
+/frontend-oke-app/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+# Others
+.env

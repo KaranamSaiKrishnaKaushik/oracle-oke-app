@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  namespace: oracle-oke-app
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-oke-app
+  template:
+    metadata:
+      labels:
+        app: frontend-oke-app
+    spec:
+      containers:
+        - name: frontend-oke-app
+          image: dokkaushik/frontend-oke-app:b572b9087511b3b9cb4e949e5c5f7d6983836bb7
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 20

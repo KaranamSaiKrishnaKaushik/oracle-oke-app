@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: oracle-oke-app
+spec:
+  selector:
+    app: frontend-oke-app #angular-web
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30083   # Localhost:30083 -> Frontend
+  type: NodePort        # Switch to ClusterIP in prod
