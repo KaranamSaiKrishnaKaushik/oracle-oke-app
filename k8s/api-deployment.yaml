@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-oke-api-service
-          image: dokkaushik/backend-oke-api-service:b572b9087511b3b9cb4e949e5c5f7d6983836bb7
+          image: dokkaushik/backend-oke-api-service:909dacff23d3b60b7dd07c7eff3752f010d338f4
           ports:
             - containerPort: 5000
           env:
