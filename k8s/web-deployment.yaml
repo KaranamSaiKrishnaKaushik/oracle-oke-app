@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend-oke-app
-          image: dokkaushik/frontend-oke-app:909dacff23d3b60b7dd07c7eff3752f010d338f4
+          image: dokkaushik/frontend-oke-app:b97cbb4e697d5cdbc0500f0a38867ba585e2d42b
           ports:
             - containerPort: 80
           readinessProbe:
